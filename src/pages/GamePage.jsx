@@ -24,11 +24,11 @@ const GamePage = () => {
   const [showWord, setShowWord] = useState(false);
 
   useEffect(() => {
-    // Play background music when the component mounts
+    
     const backgroundMusic = new Audio(bgMusic);
     backgroundMusic.play();
 
-    // Clean up the audio element when the component unmounts
+    
     return () => {
       backgroundMusic.pause();
       backgroundMusic.currentTime = 0;
@@ -36,11 +36,9 @@ const GamePage = () => {
   }, []);
 
   useEffect(() => {
-    // Play alphabet music when selectedButton changes
     const alphabetMusic = new Audio(getAlphabetMusic());
     alphabetMusic.play();
 
-    // Clean up the audio element when the selectedButton changes
     return () => {
       alphabetMusic.pause();
       alphabetMusic.currentTime = 0;

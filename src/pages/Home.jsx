@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import home_bcg from '../backgrounds/home_bckgrnd.avif';
 import bgMusic from '../music/bg_music.mp3';
+import { Navigate } from 'react-router-dom';
 
 const Home = () => {
   
@@ -14,7 +15,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${home_bcg})` }}
       >
         <button
-          onClick={() => window.location.href = '/play'}
+          onClick={() => navigate('/play')}
           className="bg-yellow-500 text-white py-4 px-8 rounded-lg flex items-center gap-2"
         >
           <svg
